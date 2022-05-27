@@ -1,8 +1,10 @@
 .navbar {
   /* background-color: #deecff; */
   background-color: white;
-  box-shadow: 0 8px 32px 0 rgb(31 38 135 / 37%);
-  backdrop-filter: blur(4px);
+  /* box-shadow: 0 8px 32px 0 rgb(31 38 135 / 37%);
+  backdrop-filter: blur(4px); */
+  box-shadow: 0 0.125rem 0.625rem rgb(90 97 105 / 12%);
+
   opacity: 0.9;
   position: sticky;
   top: 0;
@@ -10,70 +12,134 @@
   height: 80px;
   display: flex;
   align-items: center;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 1.125rem;
   flex-direction: row;
   justify-content: center;
 }
-.topLeft {
-  flex: 2;
-  display: flex;
-  justify-content: flex-end;
-  cursor: pointer;
-}
-.tannyBlogPic {
-  width: 22px;
-  height: 22px;
-}
-.tannyBlogPicY {
-  width: 22px;
-  height: 22px;
-  margin-right: 15px;
-}
-.tannyBlogPicC {
-  width: 25px;
-  height: 25px;
-  margin-left: 6px;
-}
-.topCenter {
-  flex: 6;
+/* left */
+.top-left {
+  flex: 3;
   display: flex;
   justify-content: center;
-}
-.topCenterList {
-  display: flex;
-  list-style: none;
-  flex-direction: row;
+  align-items: center;
+  height: 100%;
   width: 100%;
-  justify-content: center;
-  padding: 0;
 }
-.topCenterItem {
-  margin-right: 50px;
+.logo-container {
+  font-family: 'Dancing Script', cursive;
+  border-radius: 10px;
+  display: flex;
+  font-size: 40px;
+  letter-spacing: 5px;
+  width: 80%;
+  height: 80%;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
 }
-.topRight {
-  flex: 2;
+.logo {
+  /* border-radius: 0 0 10px 2px;
+  box-shadow:  2px 2px 2px rgb(234, 230, 230); */
+  /* border-radius: 10px 2px 0 0; */
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+  width: 80%;
+  height: 100%;
+  cursor: pointer;
+}
+/* right */
+.top-right {
+  flex: 3;
   display: flex;
   justify-content: center;
   flex-direction: row;
+  height: 100%;
+  align-items: center;
 }
-.topRightText {
-  display: flex;
-  flex-direction: column;
-  margin-right: 10px;
-}
-.topRightImg {
-  margin-right: 10px;
-}
-.userPic {
-  width: 50px;
-  height: 50px;
+.user-icon {
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   object-fit: cover;
   cursor: pointer;
+  margin-right: 10px;
+  
 }
-.topRightLogout {
-  margin-top: 10px;
+.user-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 180px;
+
+}
+.display-name{
+  font-size: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  text-overflow: ellipsis;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.login-container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.login-button{
+  font-size: 14px;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  background-color: rgb(178, 176, 176);
+  width: 40%;
+  height: 40%;
+  box-shadow: 0 7px 18px 0 rgb(31 38 135 / 37%);
+  backdrop-filter: blur(4px);
   cursor: pointer;
+  letter-spacing: 2px;
+}
+.login-container :hover{
+  color: black;
+  border: rgb(178, 176, 176) solid 2px;
+  background-color: white;
+}
+/* center */
+.top-center {
+  display: flex;
+  flex: 7;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.top-center-list {
+  padding: 0; /* To remove default left padding */
+  width: 100%;
+  display: flex;
+  list-style: none;
+  flex-direction: row;
+  justify-content: center;
+}
+.top-center-item {
+  margin-right: 40px;
+}
+
+.top-center-item a {
+  text-decoration: none;
+}
+.top-center-item a:hover {
+  
+  cursor: pointer;
+}
+.top-center-list :active{
+  text-decoration: underline;
+}
+.top-center-list :visited{
+  color: black;
+}
+body{
+  background: #f5f6f8;
 }
