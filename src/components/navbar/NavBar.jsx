@@ -2,7 +2,7 @@ import React from "react";
 import "./navbar.css";
 
 export default function NavBar() {
-    const isLogin = true
+    const isLogin = false
   return (
     <div className="navbar">
       <div className="top-left">

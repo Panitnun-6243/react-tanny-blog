@@ -1,5 +1,99 @@
-.header-container{
-    width: 100%;
-    height: 40%;
-    /* background-image: url("public/images/header_bg.png"); */
+.header-section {
+  padding: 20px;
+  background-color: #f5f6f8;
+}
+
+.header-container {
+  background-color: white;
+  box-shadow: 0 0.125rem 0.625rem rgb(90 97 105 / 12%);
+  /* margin: 12px; */
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-around; */
+}
+/* left */
+.header-left {
+  display: flex;
+}
+.header-image {
+  width: 550px;
+  height: 450px;
+}
+
+/* right */
+.header-right {
+  width: 100%;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.header-title {
+  font-family: "Dancing Script", cursive;
+  letter-spacing: 5px;
+  font-size: 55px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.writer {
+  font-family: "Dancing Script", cursive;
+  letter-spacing: 2px;
+  font-size: 18px;
+  color: darkgray;
+  font-weight: 400;
+}
+.header-detail {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 22px;
+  margin-bottom: 10px;
+  font-weight: 300;
+}
+.category-title {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+.category-button-wrap {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 15px;
+}
+.category-button-a {
+  background-color: #485461;
+  background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
+  font-size: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  margin-right: 10px;
+  border: none;
+}
+.category-button-a:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.category-button-i {
+  background-color: #ffffff;
+  background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
+  border: none;
+  font-size: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  padding: 10px;
+  border-radius: 10px;
+  color: black;
+  margin-right: 10px;
+}
+
+.category-button-i:hover {
+  cursor: pointer;
+  transform: scale(1.1);
 }
