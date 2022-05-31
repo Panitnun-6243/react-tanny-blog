@@ -1,0 +1,110 @@
+.card {
+  border-radius: 10px;
+  box-shadow: 0 0.125rem 0.625rem rgb(90 97 105 / 12%);
+  cursor: default;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 371px;
+  height: 400px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.card-header {
+  background-image: url("https://picsum.photos/400/300");
+  background-size: cover !important;
+  background-repeat: no-repeat;
+  width: 371px;
+  height: 100%;
+  background-size: 371px 235px;
+  border-radius: 10px 10px 0 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover .card-header {
+  background-size: 403px 267px;
+}
+
+.card-header-mask {
+  border-radius: 10px 10px 0px 0px;
+  height: 100%;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.card:hover .card-header-mask {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.card-body {
+  background-color: #fff;
+  border-radius: 0 0 10px 10px;
+  padding: 0 26px 26px 26px;
+}
+
+.card-body-header {
+  /* height: 58.67px; */
+  /* overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; */
+  /* overflow: hidden;
+    text-overflow: ellipsis; */
+  /* overflow: hidden;
+    text-overflow: ellipsis; */
+  /* position: absolute;
+    left: 0; */
+  cursor: pointer;
+  padding: 10px 0px 10px 0px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.card-body-header h1 {
+  color: #3d5170;
+  font-size: 22px;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card-body-description {
+  height: 0;
+  opacity: 0;
+  color: #757b82;
+  line-height: 30px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.card:hover .card-body-description {
+  height: 90px;
+  display: block;
+  opacity: 1;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.card-body-footer {
+  z-index: 10;
+  margin-top: 14px;
+  font-size: 14px;
+  color: #9fa5a8;
+}

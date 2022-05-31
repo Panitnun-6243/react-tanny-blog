@@ -9,6 +9,11 @@ export default function Posts() {
       <div className='post-category-title'>All Posts</div>
       <div className='all-post-container'>
           <Post/>
+          <Post/>
+          <Post/>
+          <Post/>
+          <Post/>
+          <Post/>
       </div>
       </>
     
