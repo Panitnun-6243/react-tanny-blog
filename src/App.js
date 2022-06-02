@@ -1,11 +1,11 @@
 import NavBar from "./components/navbar/NavBar";
-import Settings from "./pages/settings/Settings";
+import Register from "./pages/register/Register";
 
 function App() {
   return (
     <div className="App">
       <NavBar />
-      <Settings/>
+      <Register/>
     </div>
   );
 }

@@ -1,0 +1,62 @@
+.signup-section{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-bottom: 1.5rem;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #f5f6f8;
+}
+.signup-page-title {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    letter-spacing: 0.125rem;
+    color: #818ea3;
+    font-size: 0.645rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+.signup-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: auto;
+    height: fit-content;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    line-height: 28px;
+    background-color: white;
+    width: 60%;
+    /* padding: 1rem; */
+    border-radius: 0.625rem;
+    box-shadow: 0 2px 0 rgb(90 97 105 / 11%), 0 4px 8px rgb(90 97 105 / 12%),
+      0 10px 10px rgb(90 97 105 / 6%), 0 7px 70px rgb(90 97 105 / 10%);
+    padding: 1rem;
+}
+.signup-bg{
+    width: 100%;
+    height: 300px;
+
+}
+.signup-form{
+    flex:6;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+    padding: 15px;
+}
+.signup-form-title{
+    font-size: 28px;
+    font-weight: 500;
+    color: #3d5170;
+    /* padding-bottom: 1rem; */
+    
+}
+.signup-button-container{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 1rem;
+  column-gap: 1.5rem;
+}

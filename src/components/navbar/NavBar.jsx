@@ -26,7 +26,7 @@ export default function NavBar() {
           <div className="user-container">
               <p className="display-name">Panitnun Suvannabun</p>
               
-          </div></> :<div className="login-container"><button className="login-button">Login</button></div>  }
+          </div></> :<div className="login-container-button"><button className="login-button">Login</button></div>  }
           
       </div>
     </div>
