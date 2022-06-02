@@ -1,11 +1,11 @@
 import NavBar from "./components/navbar/NavBar";
-import Single from "./pages/single/Single";
+import Write from "./pages/write/Write";
 
 function App() {
   return (
     <div className="App">
       <NavBar />
-      <Single/>
+      <Write/>
     </div>
   );
 }
