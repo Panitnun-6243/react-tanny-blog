@@ -11,14 +11,14 @@ export default function WriteSideBar() {
       ) : (
         <img
           src="https://picsum.photos/700/300"
-          alt=""
+          alt="insert"
           className="insert-post-image"
         />
       )}
 
       <div className="action-section">
-        <button className="insert-button">insert picture</button>
-        {/* <input type="file" className="insert-button"/> */}
+        <label className="insert-button" htmlFor="fileInput">insert picture</label>
+        <input type="file" id="fileInput" style={{display:"none"}}/> 
         <div className="action-title">Publish your post</div>
         <div className="publish-button-container">
           <button className="cancel-button">cancel</button>
