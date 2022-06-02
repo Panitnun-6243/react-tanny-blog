@@ -8,7 +8,7 @@ export default function WritePost() {
       <div className="write-content-container">
           <form className='write-form'>
           <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="Your post title"/>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="15" placeholder="Detail..."></textarea>
+          <textarea className="form-control" id="exampleFormControlTextarea1" rows="15" placeholder="Detail..."></textarea>
           </form>
       </div>
     </div>

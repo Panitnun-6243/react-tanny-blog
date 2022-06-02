@@ -2,7 +2,7 @@ import React from "react";
 import "./writesidebar.css";
 
 export default function WriteSideBar() {
-  const isEmpty = true;
+  const isEmpty = false;
 
   return (
     <div className="write-sidebar-container">
@@ -18,6 +18,7 @@ export default function WriteSideBar() {
 
       <div className="action-section">
         <button className="insert-button">insert picture</button>
+        {/* <input type="file" className="insert-button"/> */}
         <div className="action-title">Publish your post</div>
         <div className="publish-button-container">
           <button className="cancel-button">cancel</button>

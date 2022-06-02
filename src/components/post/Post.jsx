@@ -4,9 +4,9 @@ import "./post.css";
 export default function Post() {
   return (
     <div>
-      <div className="card">
-        <div className="card-header">
-          <div className="card-header-mask"></div>
+      <div className="post-card">
+        <div className="post-card-header">
+          <div className="post-card-header-mask"></div>
         </div>
         <div className="card-body">
           <div className="card-body-header">

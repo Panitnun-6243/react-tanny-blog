@@ -1,4 +1,4 @@
-.card {
+.post-card {
   border-radius: 10px;
   box-shadow: 0 0.125rem 0.625rem rgb(90 97 105 / 12%);
   cursor: default;
@@ -11,7 +11,7 @@
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-.card-header {
+.post-card-header {
   background-image: url("https://picsum.photos/400/300");
   background-size: cover !important;
   background-repeat: no-repeat;
@@ -26,12 +26,12 @@
   transition: all 0.3s ease-in-out;
 }
 
-.card:hover .card-header {
+.post-card:hover .card-header {
   background-size: 403px 267px;
 }
 
-.card-header-mask {
-  border-radius: 10px 10px 0px 0px;
+.post-card-header-mask {
+  border-radius: 10px 10px 0px 0px ;
   height: 100%;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
@@ -40,7 +40,7 @@
   transition: all 0.5s ease-in-out;
 }
 
-.card:hover .card-header-mask {
+.post-card:hover .post-card-header-mask {
   background-color: rgba(0, 0, 0, 0.6);
 }
 
@@ -91,7 +91,7 @@
   overflow: hidden;
 }
 
-.card:hover .card-body-description {
+.post-card:hover .card-body-description {
   height: 90px;
   display: block;
   opacity: 1;

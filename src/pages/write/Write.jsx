@@ -1,6 +1,5 @@
 import React from 'react'
 import "./write.css"
-import Footer from "../../components/footer/Footer";
 import WritePost from "../../components/writepost/WritePost";
 import WriteSideBar from '../../components/writesidebar/WriteSideBar';
 
@@ -18,7 +17,7 @@ export default function Write() {
           </div>
       </div>
     </div>
-    <Footer/>
+    
     </>
   )
 }

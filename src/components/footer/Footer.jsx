@@ -3,7 +3,7 @@ import "./footer.css"
 
 export default function Footer() {
   return (
-    <footer>
+    <footer className='footer'>
         <p>© 2022 Tanny Blog's | Panitnun Suvannabun</p>
     </footer>
   )
