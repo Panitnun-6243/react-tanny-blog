@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./navbar.css";
 
 export default function NavBar() {
-    const isLogin = false
+    const isLogin = true
   return (
     <div className="navbar">
       <div className="top-left">
@@ -14,15 +15,17 @@ export default function NavBar() {
       </div>
       <div className="top-center">
         <ul className="top-center-list">
-          <li className="top-center-item"><a href="#home">Home</a></li>
-          <li className="top-center-item"><a href="#about me">About Me</a></li>
-          <li className="top-center-item"><a href="#write">Write</a></li>
-          {isLogin ? <li className="top-center-item"><a href="#logout">Logout</a></li> : null}
+          <li className="top-center-item">
+            <Link to="/">Home</Link>
+            </li>
+          {/* <li className="top-center-item">About Me</li> */}
+          <li className="top-center-item"><Link to="/write">Write</Link></li>
+          {isLogin ? <li className="top-center-item"><Link to="/">Logout</Link></li> : null}
           
         </ul>
       </div>
       <div className="top-right">
-          {isLogin?<> <img src="images/profileIcon.png" alt="userpic" className="user-icon"/>
+          {isLogin?<><Link to="/settings" className="link"><img src="https://picsum.photos/300/300" alt="userpic" className="user-icon"/></Link> 
           <div className="user-container">
               <p className="display-name">Panitnun Suvannabun</p>
               
