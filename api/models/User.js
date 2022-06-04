@@ -22,7 +22,7 @@ const UserSchema = new mongoose.Schema(
     },
     desc: {
       type: String,
-      required: false,
+      default: "",
     },
   },
   { timestamps: true }
