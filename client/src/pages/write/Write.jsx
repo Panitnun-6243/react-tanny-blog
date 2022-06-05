@@ -2,6 +2,7 @@ import React, { useState, useContext } from 'react'
 import "./write.css"
 import { Context } from "../../context/Context";
 import axios from "axios";
+import { Link } from 'react-router-dom';
 
 export default function Write() {
   const isEmpty = false;
@@ -68,7 +69,9 @@ export default function Write() {
         <input type="file" id="fileInput" style={{display:"none"}} onChange={(e) => setFile(e.target.files[0])}/> </form>
         <div className="action-title">Publish your post</div>
         <div className="publish-button-container">
-          <button className="cancel-button">cancel</button>
+          <button className="cancel-button"><Link to="/" className="link">
+                  cancel
+                </Link></button>
           <button className="publish-button" type='submit' form='form1'>publish </button>
         </div>
       </div>

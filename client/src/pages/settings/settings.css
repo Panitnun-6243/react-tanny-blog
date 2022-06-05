@@ -81,5 +81,21 @@
 .update-button-section{
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
+  align-items: center;
+  column-gap: 1rem;
 }
+
+/* .delete-section{
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  
+  flex-direction: column;
+  row-gap: 10px;
+}
+.delete-section-title{
+  font-size: 20px;
+  color: red;
+  font-weight: 600;
+} */
