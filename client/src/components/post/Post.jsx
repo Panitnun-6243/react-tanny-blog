@@ -3,10 +3,11 @@ import { Link } from "react-router-dom";
 import "./post.css";
 
 export default function Post({post}) {
+  const PF = "http://localhost:5000/images/";
   return (
     <div>
       <div className="post-card">
-        <div className="post-card-header" style={post.picture && ({ backgroundImage:`url(${post.picture})`}) }>
+        <div className="post-card-header" style={{ backgroundImage:`url(${PF + post.photo})`} }>
           <div className="post-card-header-mask"></div>
         </div>
         <div className="card-body">

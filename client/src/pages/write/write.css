@@ -159,3 +159,7 @@
   flex-direction: column;
   row-gap: 2rem;
 }
+.action-form{
+  display: flex;
+  justify-content: center;
+}

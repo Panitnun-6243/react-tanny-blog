@@ -1,10 +1,38 @@
-import React from 'react'
+import React, { useState, useContext } from 'react'
 import "./write.css"
-// import WritePost from "../../components/writepost/WritePost";
-// import WriteSideBar from '../../components/writesidebar/WriteSideBar';
+import { Context } from "../../context/Context";
+import axios from "axios";
 
 export default function Write() {
   const isEmpty = false;
+  const [title, setTitle] = useState("");
+  const [desc, setDesc] = useState("");
+  const [file, setFile] = useState(null);
+  const { user } = useContext(Context);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const newPost = {
+      username: user.username,
+      title,
+      desc,
+    };
+    if (file) {
+      const data =new FormData();
+      const filename = Date.now() + file.name;
+      data.append("name", filename);
+      data.append("file", file);
+      newPost.photo = filename;
+      try {
+        await axios.post("/upload", data);
+      } catch (err) {}
+    }
+    try {
+      const res = await axios.post("/posts", newPost);
+      window.location.replace("/post/" + res.data._id);
+    } catch (err) {}
+  }
+
   return (
     <>
     <div className="single-container">
@@ -14,32 +42,34 @@ export default function Write() {
           <div className="write-post-container">
       
       <div className="write-content-container">
-          <form className='write-form'>
-          <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="Your post title"/>
-          <textarea className="form-control" id="exampleFormControlTextarea1" rows="15" placeholder="Detail..."></textarea>
+          <form className='write-form' onSubmit={handleSubmit} id="form1">
+          <input type="text" className="form-control" id="exampleFormControlInput1" placeholder="Your post title" autoFocus={true}
+            onChange={e=>setTitle(e.target.value)}/>
+          <textarea className="form-control" id="exampleFormControlTextarea1" rows="15" placeholder="Detail..." onChange={e=>setDesc(e.target.value)}></textarea>
           </form>
       </div>
     </div>
           </div>
           <div className="single-sidebar-section">
           <div className="write-sidebar-container">
-      {isEmpty ? (
-        <div className="empty-image"></div>
-      ) : (
-        <img
-          src="https://picsum.photos/700/300"
+      {file ? (<img
+          src={URL.createObjectURL(file)}
           alt="insert"
           className="insert-post-image"
         />
+        
+      ) : (
+        <div className="empty-image"></div>
       )}
 
       <div className="action-section">
-        <label className="insert-button" htmlFor="fileInput">insert picture</label>
-        <input type="file" id="fileInput" style={{display:"none"}}/> 
+        <form className='action-form' onSubmit={handleSubmit} id="form1">
+        <label className="insert-button" htmlFor="fileInput" >insert picture</label>
+        <input type="file" id="fileInput" style={{display:"none"}} onChange={(e) => setFile(e.target.files[0])}/> </form>
         <div className="action-title">Publish your post</div>
         <div className="publish-button-container">
           <button className="cancel-button">cancel</button>
-          <button className="publish-button">publish </button>
+          <button className="publish-button" type='submit' form='form1'>publish </button>
         </div>
       </div>
     </div>
