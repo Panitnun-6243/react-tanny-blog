@@ -133,7 +133,7 @@
 .top-center-item a {
   text-decoration: none;
 }
-.top-center-item a:hover {
+.top-center-item:hover {
   cursor: pointer;
   font-weight: 500;
 }

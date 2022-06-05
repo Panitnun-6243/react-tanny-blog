@@ -1,16 +1,19 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./post.css";
 
 export default function Post({post}) {
   return (
     <div>
       <div className="post-card">
-        <div className="post-card-header" style={{backgroundImage:`url(${post.picture})`}}>
+        <div className="post-card-header" style={post.picture && ({ backgroundImage:`url(${post.picture})`}) }>
           <div className="post-card-header-mask"></div>
         </div>
         <div className="card-body">
           <div className="card-body-header">
+            <Link to={`/post/${post._id}`} className="link">
             <h1>{post.title}</h1>
+            </Link>
           </div>
           <p className="card-body-description">
             {post.desc}

@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import "./navbar.css";
+import { Context } from "../../context/Context";
 
 export default function NavBar() {
-    const isLogin = true
+    const {user, dispatch} = useContext(Context);
+    const handleLogout = () => {
+      dispatch({ type: "LOGOUT" });
+    }
+  
   return (
     <div className="navbar">
       <div className="top-left">
@@ -20,16 +25,17 @@ export default function NavBar() {
             </li>
           {/* <li className="top-center-item">About Me</li> */}
           <li className="top-center-item"><Link to="/write">Write</Link></li>
-          {isLogin ? <li className="top-center-item"><Link to="/">Logout</Link></li> : null}
+          {user? <li className="top-center-item" onClick={handleLogout}>Logout</li> : null}
+          
           
         </ul>
       </div>
       <div className="top-right">
-          {isLogin?<><Link to="/settings" className="link"><img src="https://picsum.photos/300/300" alt="userpic" className="user-icon"/></Link> 
+          {user?<><Link to="/settings" className="link"><img src={user.profilePic} alt="userpic" className="user-icon"/></Link> 
           <div className="user-container">
-              <p className="display-name">Panitnun Suvannabun</p>
+              <p className="display-name">{user.username}</p>
               
-          </div></> :<div className="login-container-button"><button className="login-button">Login</button></div>  }
+          </div></> :<div className="login-container-button"><button className="login-button"><Link to="/login" className="link">Login</Link></button></div>  }
           
       </div>
     </div>

@@ -22,12 +22,12 @@ export default function Header() {
           </div>
           <div>
             <div className="header-category">
-              <div className="category-title">Categories</div>
+              {/* <div className="category-title">Categories</div> */}
               <div className="category-button-wrap">
-                <button className="category-button-a">All</button>
-                <button className="category-button-i">Education</button>
-                <button className="category-button-i">Lifestyle</button>
-                <button className="category-button-i">Sport</button>
+                {/* <button className="category-button-a">All</button> */}
+                <button className="category-button-i">Explore now</button>
+                {/* <button className="category-button-i">Lifestyle</button>
+                <button className="category-button-i">Sport</button> */}
               </div>
             </div>
           </div>

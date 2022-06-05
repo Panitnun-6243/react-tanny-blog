@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useLocation } from 'react-router-dom'
 import "./singlesidebar.css"
 
 export default function SingleSideBar() {
+
   return (
     <div className='single-sidebar-container'>
       <div className='user-image-container'>

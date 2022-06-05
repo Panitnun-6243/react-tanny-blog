@@ -2,7 +2,7 @@ import React from "react";
 import "./single.css";
 import SinglePost from "../../components/singlepost/SinglePost"
 import SingleSideBar from "../../components/singlepost_sidebar/SingleSideBar"
-import Footer from "../../components/footer/Footer";
+// import Footer from "../../components/footer/Footer";
 
 export default function Single() {
   return (
@@ -18,7 +18,7 @@ export default function Single() {
           </div>
       </div>
     </div>
-    <Footer/>
+    {/* <Footer/> */}
     </>
   );
 }

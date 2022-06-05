@@ -1,21 +1,37 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import "./singlepost.css";
+import axios from "axios";
 
 export default function SinglePost() {
-  const para =
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.";
+  const location = useLocation();
+  const [post, setPost] = useState({});
+    const path = location.pathname.split("/")[2];
+
+
+
+    useEffect(() => {
+      const getPost = async () => {
+        const res = await axios.get("/posts/" + path);
+        
+        setPost(res.data);
+        console.log(res)
+      };
+      getPost();
+    }, [path]);
 
   return (
     <div className="single-post-container">
-      <img src="https://picsum.photos/700/300" alt="" className="post-image" />
+      {post.picture && (<img src={post.photo} alt="" className="post-image" />)}
+      
       <div className="post-content-container">
-        <div className="post-content-title">How to make a blog</div>
+        <div className="post-content-title">{post.title}</div>
         <div className="post-subtitle">
           <div className="post-subtitle-time">
-            <i className="fa-solid fa-clock"></i> 1 hour ago
+            <i className="fa-solid fa-clock"></i> {new Date(post.createdAt).toDateString()}
           </div>
           <div className="post-subtitle-tool">
-            <div className="edit-post" >
+            <div className="edit-post">
               <i className="fa-solid fa-feather-pointed"></i>
             </div>
             <div className="delete-post">
@@ -23,7 +39,7 @@ export default function SinglePost() {
             </div>
           </div>
         </div>
-        <div className="post-content-paragraph">{para}</div>
+        <div className="post-content-paragraph">{post.desc}</div>
       </div>
     </div>
   );
