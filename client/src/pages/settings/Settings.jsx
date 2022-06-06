@@ -87,13 +87,13 @@ export default function Settings() {
                 placeholder=""
                 onChange={(e) => setPassword(e.target.value)}
               />
-              <label>About yourself</label>
+              {/* <label>About yourself</label>
               <textarea
                 className="form-control"
                 id="exampleFormControlTextarea1"
                 rows="3"
                 placeholder="Your briefly description..."
-              ></textarea>
+              ></textarea> */}
             </form>
             <div className="update-button-section">
               <button type="submit" className="btn btn-secondary" form="form2">

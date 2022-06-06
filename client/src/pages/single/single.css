@@ -25,15 +25,14 @@
   margin-left: -15px; */
   flex-direction: row;
 }
-.single-post-section {
+/* .single-post-section {
   display: flex;
   flex: 0 0 75%;
   max-width: 75%;
   position: relative;
   width: 100%;
   min-height: 1px;
-  /* padding-right: 15px;
-  padding-left: 15px; */
+  
 }
 .single-sidebar-section {
   display: flex;
@@ -42,6 +41,5 @@
   position: relative;
   width: 100%;
   min-height: 1px;
-  /* padding-right: 15px;
-  padding-left: 15px; */
-}
+ 
+} */

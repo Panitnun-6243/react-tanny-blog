@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <div className="home">
+      <div className="home" id="post">
         <Posts posts={posts}/>
       </div>
       <Footer />
